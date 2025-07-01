@@ -12,3 +12,6 @@
 | 이름 | 전공 | 공부중인 언어 |
 |:----|:---|:------------|
 |김유진| 컴퓨터공학부 | C, Java|
+
+## git hub 동영상
+![video](https://github.com/user-attachments/assets/6095f496-9047-419c-93eb-87d703d73a44)
