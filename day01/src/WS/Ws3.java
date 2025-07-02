@@ -8,8 +8,12 @@ public class Ws3 {
         int [] arr = new int[5];
         Random rand = new Random();
         for (int i = 0; i < 5; i++) {
-            int num = rand.nextInt(10);
-            if (!Arrays.asList(arr).contains(num)) {
+            int num = rand.nextInt(10) + 1;
+//            if (!Arrays.asList(arr).contains(num)) {
+//                arr[i] = num;
+//            }
+
+            if (!Arrays.stream(arr).anyMatch(value -> value == num)) {
                 arr[i] = num;
             }
         }
