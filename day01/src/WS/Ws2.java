@@ -1,6 +1,5 @@
 package WS;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -68,5 +67,6 @@ public class Ws2 {
 //        System.out.println();
 //        System.out.println("max : " + max);
 //        System.out.println("min : " + min);
+
     }
 }
