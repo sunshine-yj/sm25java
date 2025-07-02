@@ -6,11 +6,11 @@ public class Op5 {
         int b = 20;
         int c = 30;
 
-        int max;
-        int min;
+        int max = 0;
+        int min = 0;
 
-        max = (a > b ? a : b) > c ? (a > b ? a : b) : c;
-        min = (a < b ? a : b) < c ? (a < b ? a : b) : c;
+        max = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
+        min = (a < b) ? (a < c ? a : c) : (b < c ? b : c);
         System.out.println("max = " + max);
         System.out.println("min = " + min);
     }

@@ -6,8 +6,8 @@ public class Op4 {
         int b = 20;
         int c = 30;
 
-        int max;
-        int min;
+        int max = 0;
+        int min = 0;
 
         if (a > b && a > c) {
             max = a;
