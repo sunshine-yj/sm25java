@@ -12,15 +12,19 @@ public class Ws2 {
         Random rand = new Random();
 
         for (int i = 0; i < 5; i++) {
-            if() {
-                arr[i] = rand.nextInt(10) + 1;
+            arr[i] = rand.nextInt(10) + 1;
+            for (int j = 0; j < i; j++) {
+                if (arr[i] == arr[j]) {
+                    i--;
+                }
             }
         }
 
         for (int i = 0; i < 5; i++) {
+            System.out.print(arr[i] + " ");
+        }
 
-            System.out.println(arr[i]);
-
+        for (int i = 0; i < 5; i++) {
             if (max < arr[i]) {
                 max = arr[i];
             }
@@ -28,7 +32,7 @@ public class Ws2 {
                 min = arr[i];
             }
         }
-
+        System.out.println();
         System.out.println("max : " + max);
         System.out.println("min : " + min);
     }
