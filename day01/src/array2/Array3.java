@@ -13,14 +13,13 @@ public class Array3 {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 int num = rand.nextInt(100) + 1;
-                if (arr[i][j] == 0)
+                if (i == 0 & j == 0)
                     arr[i][j] = num;
                 else {
                     for (int k = 0; k < 5; k++) {
                         for (int l = 0; l < 5; l++) {
-                            if (arr[i][j] == arr[k][l]) {
+                            if (arr[k][l] == num) {
                                 j--;
-                                break;
                             }
                             else {
                                 arr[i][j] = num;
