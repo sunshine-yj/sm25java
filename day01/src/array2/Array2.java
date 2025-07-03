@@ -3,7 +3,7 @@ package array2;
 import java.util.Arrays;
 import java.util.Random;
 
-public class array2 {
+public class Array2 {
     public static void main(String[] args) {
         int arr[][] = new int[3][3];
         Random rand = new Random();
