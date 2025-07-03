@@ -47,6 +47,8 @@ public class Control7 {
                         }
                     }
                 }
+
+
                 // 1번 조건
                 for(int i = 0; i < arr2.length; i++) {
                     System.out.printf("%2d ", arr2[i]);
