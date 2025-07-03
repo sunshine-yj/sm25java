@@ -13,6 +13,7 @@ public class Array5 {
             for (int j = 0; j < arr[i].length; j++) {
                 int num = rand.nextInt(10) + 1;
                 if (i == 0 && j == 0) {
+                    System.out.printf("Start : %d\n", num);
                     arr[i][j] = num;
                 } else {
                     boolean flag = true;
@@ -21,6 +22,7 @@ public class Array5 {
                     for (int k = 0; k <= i; k++) {
                         for(int n : arr[k]) {
                             if (n == num) {
+                                System.out.printf("중복[%d][%d] : %d\n", i, j, num);
                                 flag = false;
                                 j--;
                                 break point;
@@ -29,17 +31,19 @@ public class Array5 {
                     }
                     // num이 배열에 없으면 입력
                     if (flag == true) {
+                        System.out.printf("arr[%d][%d] : %d\n", i, j, num);
                         arr[i][j] = num;
                     }
                 }
             }
         }
         // 배열 출력
-        for (int a[] : arr) {
-            for (int n : a) {
-                System.out.print(n + " ");
-            }
-            System.out.println();
-        }
+//        for (int a[] : arr) {
+//            for (int n : a) {
+//                System.out.print(n + " ");
+//            }
+//            System.out.println();
+//        }
+
     }
 }
