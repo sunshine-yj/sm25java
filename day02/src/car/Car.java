@@ -1,9 +1,9 @@
 package car;
 
 public class Car {
-    private String name;
-    private String color;
-    private int size;
+    public String name;
+    public String color;
+    public int size;
 
     public Car(){
         this.name = "Default";
