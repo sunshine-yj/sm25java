@@ -6,10 +6,11 @@ public class Car {
     private int size;
 
     public Car(){
-        this.name= "Default";
-        this.color= "white";
-        this.size= 100;
+        this.name = "Default";
+        this.color = "white";
+        this.size = 1000;
     }
+
     public Car(String name,String color,int size){
         this.name=name;
         this.color=color;
