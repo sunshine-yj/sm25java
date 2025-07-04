@@ -3,7 +3,7 @@ package company;
 public class Company {
     public static void main(String[] args) {
         Employee employee = new Employee("이사원",1000.0);
-        SalesEmployee salesEmployee = new SalesEmployee("이세일",500.0,"seoul",1000);
+        SalesEmployee salesEmployee = new SalesEmployee("이세일",1000.0,"seoul",1000.0);
         SecretaryEmployee secretaryEmployee = new SecretaryEmployee("이비서", 1000.0, "이보스");
 
         System.out.println(employee);

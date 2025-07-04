@@ -41,5 +41,9 @@ public class SalesEmployee extends Employee {
                 '}';
     }
 
-
+    @Override
+    public double getAnnualSalary() {
+//        return super.getSalary() * 12 + bonus;
+        return super.getAnnualSalary() + bonus;
+    }
 }
