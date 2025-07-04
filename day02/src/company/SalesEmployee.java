@@ -33,7 +33,7 @@ public class SalesEmployee extends Employee {
     @Override
     public String toString() {
         return "SalesEmployee{" +
-                ", empNo=" + getEmpNo()+
+                "empNo=" + getEmpNo()+
                 ", name=" + getName() +
                 ", salary=" + getSalary() +
                 "loc='" + loc + '\'' +
