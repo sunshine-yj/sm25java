@@ -7,8 +7,8 @@ public class Car {
 
     public Car(){
         this.name= "Default";
-        this.color="while";
-        this.size=100;
+        this.color= "white";
+        this.size= 100;
     }
     public Car(String name,String color,int size){
         this.name=name;
