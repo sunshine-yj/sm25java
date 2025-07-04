@@ -24,4 +24,13 @@ public class Rectangle extends Shape {
         return (width + height) * 2;
     }
 
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "width=" + width +
+                ", height=" + height +
+                ", y=" + y +
+                ", x=" + x +
+                '}';
+    }
 }

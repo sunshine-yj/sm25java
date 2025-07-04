@@ -21,4 +21,12 @@ public class Circle extends Shape {
         return 2 * Math.PI * radius;
     }
 
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

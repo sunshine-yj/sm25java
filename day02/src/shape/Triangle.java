@@ -23,4 +23,14 @@ public class Triangle extends Shape {
     public double getCircumference() {
         return Math.sqrt((Math.pow(width,2) +  Math.pow(width,2)) + width + height);
     }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "width=" + width +
+                ", height=" + height +
+                ", x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }
