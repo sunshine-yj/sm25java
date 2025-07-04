@@ -2,8 +2,8 @@ package bank;
 
 public class Account {
 
-    String accNo;
-    double balance;
+    private String accNo;
+    private double balance;
 
     public Account() {
         this.accNo = "11111111";
@@ -26,8 +26,13 @@ public class Account {
     }
 
     public void withdraw(double money) {
-        this.balance -= money;
-        System.out.println("당행 출금 완료: ");
+        // 출금 금액이 balance 보다 커야 한다
+        if (this.balance >= money) {
+            this.balance -= money;
+            System.out.println("당행 출금 완료: ");
+        } else {
+            System.out.println("잔액 부족");
+        }
     }
 
     public void withdraw(double money, String acc) {
@@ -40,4 +45,7 @@ public class Account {
         return "Account{" + "accNo='" + accNo + '\'' + ", balance=" + balance + '}';
     }
 
+    public double getBalance() {
+        return balance;
+    }
 }
