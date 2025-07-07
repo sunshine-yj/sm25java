@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class ItemApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        SmService itemService = new ItemService();
+        SmService<ItemDto, Integer> itemService = new ItemService();
 
         while(true){
             System.out.print("Enter Command: ");
@@ -42,7 +42,7 @@ public class ItemApp {
                 int id = sc.nextInt();
 
                 ItemDto myInfo = null;
-                myInfo = (ItemDto) itemService.get(id);
+                myInfo = itemService.get(id);
                 System.out.println(myInfo);
                 System.out.println();
 

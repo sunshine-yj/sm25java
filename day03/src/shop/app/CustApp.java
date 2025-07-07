@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class CustApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        SmService smService = new CustService();
+        SmService<CustDto, String> smService = new CustService();
 
         while(true){
             System.out.print("Enter Command: ");
@@ -41,7 +41,7 @@ public class CustApp {
                 System.out.print("Input ID: ");
                 String id = sc.nextLine();
                 CustDto myInfo = null;
-                myInfo = (CustDto) smService.get(id);
+                myInfo = smService.get(id);
                 System.out.println(myInfo);
                 System.out.println();
 
