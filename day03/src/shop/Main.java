@@ -5,11 +5,10 @@ public class Main {
         System.out.println("Start Main Application...");
         SmService<CustDto, String> smService;
         smService = new CustService();
+
         System.out.println("1. Cust Register ...");
         CustDto custDto = new CustDto("id01", "pwd01", "이말숙");
         smService.register(custDto);
-
-
         System.out.println("End Main Application...");
     }
 }
