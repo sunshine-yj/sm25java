@@ -1,4 +1,8 @@
-package shop;
+package shop.test;
+
+import shop.dto.ItemDto;
+import shop.frame.SmService;
+import shop.service.ItemService;
 
 import java.util.List;
 
@@ -13,7 +17,7 @@ public class Main2 {
         smService.register(itemDto);
         System.out.println();
 
-        System.out.println("2. Item get All");
+        System.out.println("2. Item select All");
         List<ItemDto> items = null;
         items = smService.get();
         for (ItemDto item : items) {

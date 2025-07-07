@@ -1,4 +1,8 @@
-package shop;
+package shop.test;
+
+import shop.dto.CustDto;
+import shop.frame.SmService;
+import shop.service.CustService;
 
 import java.util.List;
 
