@@ -3,6 +3,7 @@ package shop.app;
 import shop.dto.ItemDto;
 import shop.frame.SmService;
 import shop.service.ItemService;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,6 +13,13 @@ public class ItemApp {
         SmService<ItemDto, Integer> itemService = new ItemService();
 
         while(true){
+            System.out.println("i. Insert");
+            System.out.println("u. Update");
+            System.out.println("d. Delete");
+            System.out.println("q. Quit");
+            System.out.println("s. Search");
+            System.out.println("sa. Search All");
+
             System.out.print("Enter Command: ");
             String cmd = sc.nextLine();
 

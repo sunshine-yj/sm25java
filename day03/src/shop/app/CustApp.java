@@ -13,6 +13,13 @@ public class CustApp {
         SmService<CustDto, String> smService = new CustService();
 
         while(true){
+            System.out.println("i. Insert");
+            System.out.println("u. Update");
+            System.out.println("d. Delete");
+            System.out.println("q. Quit");
+            System.out.println("s. Search");
+            System.out.println("sa. Search All");
+
             System.out.print("Enter Command: ");
             String cmd = sc.nextLine();
             if(cmd.equals("q")){
