@@ -2,15 +2,30 @@ package eud.sm.repository;
 
 import eud.sm.dto.Cust;
 import eud.sm.frame.SmRepository;
+import eud.sm.frame.CustSql;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
 public class CustRepository implements SmRepository<Cust, String> {
 
     @Override
     public void insert(Cust cust, Connection conn) throws Exception {
-
+        PreparedStatement psmt = null;
+        try{
+            psmt = conn.prepareStatement(CustSql.insert);
+            psmt.setString(1, cust.getCustId());
+            psmt.setString(2, cust.getCustPwd());
+            psmt.setString(3, cust.getCustName());
+            psmt.executeUpdate();
+        } catch (Exception e) {
+            throw e;
+        }  finally {
+            if (psmt != null) {
+                psmt.close();
+            }
+        }
     }
 
     @Override
