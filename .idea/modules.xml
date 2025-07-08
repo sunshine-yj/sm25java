@@ -8,9 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/jdbc001.iml" filepath="$PROJECT_DIR$/jdbc001.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc001.main.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc001.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc001.test.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc001.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc01.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc01.main.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc01.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc01.test.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc01.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc002.iml" filepath="$PROJECT_DIR$/jdbc002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc002.main.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc002.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc002.test.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc002.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/sm25java.iml" filepath="$PROJECT_DIR$/sm25java.iml" />
     </modules>
   </component>
