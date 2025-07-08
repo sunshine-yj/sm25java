@@ -40,8 +40,8 @@ public class SelectAllCust {
             String cust_id = rs.getString("cust_id");
             String cust_pwd = rs.getString("cust_pwd");
             String cust_name = rs.getString("cust_name");
-            Date cust_regdate = rs.getDate("cust_regdate");
-            Date cust_update = rs.getDate("cust_update");
+            Timestamp cust_regdate = rs.getTimestamp("cust_regdate");
+            Timestamp cust_update = rs.getTimestamp("cust_update");
 
             System.out.printf("%s %s %s %s \n",cust_id,  cust_pwd, cust_name, cust_regdate.toString());
 

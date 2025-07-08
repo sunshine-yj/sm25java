@@ -2,16 +2,19 @@ package eud.sm.dto;
 
 import lombok.*;
 
-import java.time.LocalTime;
+import java.sql.Timestamp;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Getter
 @Setter
-public class cust {
+@Builder
+
+public class Cust {
     private String custId;
     private String custPwd;
     private String custName;
-    private LocalTime custRegdate;
-    private LocalTime custUpdate;
+    private Timestamp custRegdate;
+    private Timestamp custUpdate;
 }
