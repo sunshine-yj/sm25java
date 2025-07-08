@@ -1,12 +1,14 @@
 package eud.sm.repository;
 
 import eud.sm.dto.Cust;
+import eud.sm.frame.ConnectionPool;
 import eud.sm.frame.SmRepository;
 import eud.sm.frame.CustSql;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,12 +34,36 @@ public class CustRepository implements SmRepository<Cust, String> {
 
     @Override
     public void update(Cust cust, Connection conn) throws Exception {
-
+        PreparedStatement psmt = null;
+        try{
+            psmt = conn.prepareStatement(CustSql.update);
+            psmt.setString(3, cust.getCustId());
+            psmt.setString(1, cust.getCustPwd());
+            psmt.setString(2, cust.getCustName());
+            psmt.executeUpdate();
+        } catch (Exception e) {
+            throw e;
+        }finally {
+            if (psmt != null) {
+                psmt.close();
+            }
+        }
     }
 
     @Override
     public void delete(String s, Connection conn) throws Exception {
-
+        PreparedStatement psmt = null;
+        try{
+            psmt = conn.prepareStatement(CustSql.delete);
+            psmt.setString(1, s);
+            psmt.executeUpdate();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            if (psmt != null) {
+                psmt.close();
+            }
+        }
     }
 
     @Override
@@ -72,6 +98,31 @@ public class CustRepository implements SmRepository<Cust, String> {
 
     @Override
     public Cust select(String s, Connection conn) throws Exception {
-        return null;
+        Cust cust = new Cust();
+        PreparedStatement psmt = null;
+        ResultSet rs = null;
+
+        try {
+            psmt = conn.prepareStatement(CustSql.select);
+            psmt.setString(1, s);
+            rs = psmt.executeQuery();
+            rs.next();
+            cust.setCustId(rs.getString("cust_id"));
+            cust.setCustPwd(rs.getString("cust_pwd"));
+            cust.setCustName(rs.getString("cust_name"));
+            cust.setCustRegdate(rs.getTimestamp("cust_regdate"));
+            cust.setCustUpdate(rs.getTimestamp("cust_update"));
+
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            if (rs != null) {
+                rs.close();
+            }
+            if (psmt != null) {
+                psmt.close();
+            }
+        }
+        return cust;
     }
 }
