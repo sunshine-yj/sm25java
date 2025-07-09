@@ -15,7 +15,7 @@ public class Product {
     private int productPrice;
     private double discountRate;
     private String productImg;
-    private Timestamp productregdate;
+    private Timestamp productRegdate;
     private Timestamp productUpdate;
     private int cateId;
 }

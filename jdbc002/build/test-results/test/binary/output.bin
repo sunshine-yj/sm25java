@@ -1,4 +1,5 @@
-delete Test1 start ...
 OK
 ejdbc:mysql://localhost:3306/shopdb?useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Seoul
-delete Test1 Success
+�Product(productId=1000, productName=반바지, productPrice=10000, discountRate=0.0, productImg=p1.jpg, productRegdate=2025-07-08 09:40:00.0, productUpdate=2025-07-08 09:40:00.0, cateId=10)
+�Product(productId=1001, productName=반팔, productPrice=20000, discountRate=0.3, productImg=s1.jpg, productRegdate=2025-07-08 09:40:00.0, productUpdate=2025-07-08 09:40:00.0, cateId=20)
+�Product(productId=1002, productName=운동화, productPrice=30000, discountRate=0.1, productImg=r1.jpg, productRegdate=2025-07-08 09:40:00.0, productUpdate=2025-07-08 09:40:00.0, cateId=30)

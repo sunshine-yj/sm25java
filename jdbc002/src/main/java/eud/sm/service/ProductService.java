@@ -76,11 +76,33 @@ public class ProductService implements SmService <Product, Integer> {
 
     @Override
     public List<Product> get() throws Exception {
-        return List.of();
+        List<Product> list = null;
+        Connection conn = connPool.getConnection();
+        try{
+            list = productRepository.selectAll(conn);
+        }catch(Exception e){
+            throw e;
+        }finally {
+            if (conn != null) {
+                connPool.releaseConnection(conn);
+            }
+        }
+        return list;
     }
 
     @Override
     public Product get(Integer integer) throws Exception {
-        return null;
+        Product product = null;
+        Connection conn = connPool.getConnection();
+        try{
+            product = productRepository.select(integer, conn);
+        }catch(Exception e){
+            throw e;
+        }finally {
+            if (conn != null) {
+                connPool.releaseConnection(conn);
+            }
+        }
+        return product;
     }
 }
