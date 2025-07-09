@@ -13,10 +13,11 @@ public class Select {
         ProductService productService = new ProductService();
         Product product = null;
         try {
-            product = productService.get(1003);
+            product = productService.get(1000);
             System.out.println(product);
         } catch (Exception e) {
             System.err.println("조회 실패");
+            e.printStackTrace();
         }
     }
 

@@ -18,4 +18,5 @@ public class Product {
     private Timestamp productRegdate;
     private Timestamp productUpdate;
     private int cateId;
+    private String cateName;
 }

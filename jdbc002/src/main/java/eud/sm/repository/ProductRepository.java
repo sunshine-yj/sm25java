@@ -16,12 +16,11 @@ public class ProductRepository implements SmRepository<Product, Integer> {
         PreparedStatement psmt = null;
         try {
             psmt = conn.prepareStatement(ProductSql.insert);
-            psmt.setInt(1, product.getProductId());
-            psmt.setString(2, product.getProductName());
-            psmt.setInt(3, product.getProductPrice());
-            psmt.setDouble(4, product.getDiscountRate());
-            psmt.setString(5, product.getProductImg());
-            psmt.setInt(6, product.getCateId());
+            psmt.setString(1, product.getProductName());
+            psmt.setInt(2, product.getProductPrice());
+            psmt.setDouble(3, product.getDiscountRate());
+            psmt.setString(4, product.getProductImg());
+            psmt.setInt(5, product.getCateId());
             psmt.executeUpdate();
         } catch (Exception e) {
             throw e;
@@ -87,6 +86,7 @@ public class ProductRepository implements SmRepository<Product, Integer> {
                 product.setProductRegdate(rs.getTimestamp("product_regdate"));
                 product.setProductUpdate(rs.getTimestamp("product_update"));
                 product.setCateId(rs.getInt("cate_id"));
+                product.setCateName(rs.getString("cate_name"));
                 list.add(product);
             }
         }catch (Exception e){
